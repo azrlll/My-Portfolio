@@ -10,6 +10,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     /* YOUR SKETCH COLORS */
     --bg-color: #0b1120;       /* Dark Blue */
@@ -22,6 +26,7 @@ body {
     background: var(--bg-color);
     color: var(--text-color);
     overflow-x: hidden;
+    margin: 0;
 }
 
 section {
@@ -31,7 +36,6 @@ section {
 
 /* 1. MOVABLE HEADER */
 .header {
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -85,10 +89,9 @@ section {
 }
 
 .home-img img {
-    width: 350px;
-    height: 350px;
+    width: 250px;
+    height: 300px;
     object-fit: cover;
-    border-radius: 50%;
     border: 4px solid var(--main-color);
     box-shadow: 0 0 20px var(--main-color);
 }
@@ -292,15 +295,56 @@ form {
 }
 
 /* ANIMATION CLASSES */
-.hidden {
-    opacity: 0;
-    filter: blur(5px);
-    transform: translateY(100px);
-    transition: all 1.2s;
-}
 
 .show {
     opacity: 1;
     filter: blur(0);
     transform: translateY(0);
+}
+
+/* --- ADD THIS RIGHT BEFORE THE @MEDIA QUERY STARTS --- */
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none; /* Hidden on computer */
+    cursor: pointer;
+}
+
+/* --- REPLACE YOUR ENTIRE @MEDIA BLOCK WITH THIS --- */
+@media (max-width: 768px) {
+    
+    /* 1. Show the Menu Button */
+    #menu-icon {
+        display: block; 
+    }
+
+    /* 2. Position the Menu as a Dropdown */
+    .navbar {
+        position: fixed;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0,0,0,.2);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+        flex-direction: column;
+    }
+
+    /* 3. This class is added by JavaScript when you click */
+    .navbar.active {
+        display: flex; 
+    }
+
+    /* 4. Style the links inside the menu */
+    .navbar a {
+        font-size: 20px;
+        margin: 8px;
+        color: var(--text-color);
+        text-align: center; 
+    }
+    
+    /* 5. Adjust text sizes for mobile */
+    .home-text h1 {
+        font-size: 3.5rem; 
+    }
 }
