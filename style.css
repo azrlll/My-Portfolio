@@ -101,7 +101,9 @@ section {
     font-weight: 500;
     line-height: 1;
 }
-.home-text span { color: var(--main-color); }
+.home-text span { color: var(--main-color); 
+font-size: 50px;
+font-weight: 550;}
 .home-text h3 { font-size: 20px; margin-bottom: 5px; font-weight: 700;}
 .home-text p { font-size: 1px; margin-bottom: 2rem;}
 
@@ -110,8 +112,8 @@ section {
     padding: 1rem 2.8rem;
     background: var(--main-color);
     color: var(--bg-color);
-    border-radius: 4rem;
-    font-size: 1.5px;
+    border-radius: 4px;
+    font-size: 15px;
     font-weight: 600;
     transition: .3s;
     box-shadow: 0 0 10px var(--main-color);
@@ -126,7 +128,7 @@ section {
 /* 3. ABOUT & GENERAL HEADINGS */
 .heading {
     text-align: center;
-    font-size: 4.5rem;
+    font-size: 35px;
     margin-bottom: 5rem;
 }
 .heading span { color: var(--main-color); }
@@ -184,7 +186,7 @@ section {
 .project-box img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     transition: .5s ease;
 }
 
@@ -198,7 +200,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0,0,0,0.1), var(--main-color));
+    background: linear-gradient(rgba(241, 0, 88, 0.1));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -347,4 +349,17 @@ form {
     .home-text h1 {
         font-size: 3.5rem; 
     }
+}
+
+footer a {
+    text-align: center;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-style: none;
+    color: #ffd700;
+    font-weight: 400;
+    font-family: sans-serif;
 }
