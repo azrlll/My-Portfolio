@@ -25,10 +25,19 @@ body {
 
 section {
     min-height: 100vh;
-    padding: 10rem 9% 2rem;
+    /* Spacing between sections */
+    padding: 6rem 9% 3rem; 
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center; /* Center content horizontally within sections */
+}
+
+/* Container rules to keep everything centered and balanced */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* 1. HEADER */
@@ -51,78 +60,81 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* Controls spacing between nav links */
+    gap: 2.5rem; 
 }
 
-
-/* Update your existing .navbar a rule to include a transition */
 .navbar a {
     font-size: 1.2rem;
     color: var(--bg-color);
     font-weight: 700;
-    margin: 0 1.5rem;
-    transition: .3s ease; /* <-- Add this line */
+    /* Margin removed; using gap instead */
+    transition: .3s ease; 
 }
 
-/* Add this new rule for the hover effect */
 .navbar a:hover,
 .navbar a.active {
     color: #ffffff; 
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.6); 
-    transition-duration: 0.5s; /* <-- Add this line for a smoother transition */
+    transition-duration: 0.5s; 
 }
 
 /* 2. PROFILE SECTION */    
 .home {
-    padding-top: 15rem; /* Push down to account for fixed header */
+    /* Offset for fixed header */
+    padding-top: 10rem; 
 }
 
 .home-content {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 4rem;
-    max-width: 1200px;
+    /* Controls the space between your photo and your text */
+    gap: 3.5rem; 
+    width: 100%;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
 .home-img img {
-    width: 250px;
-    height: 300px;
+    width: 280px;
+    height: 320px;
     object-fit: cover;
-    border: 2px solid var(--main-color);
+    border: 3px solid var(--main-color);
 }
 
 .home-text {
+    flex: 1; /* Allow text to take remaining space */
     max-width: 600px;
 }
 
 .home-text h1 {
-    font-size: 2.5rem;
-    font-weight: 500;
-    line-height: 1.2;
-    margin-bottom: 1rem;
+    font-size: 2.8rem;
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: 1.2rem;
 }
 
 .home-text h1 span { 
     color: var(--main-color); 
-    font-weight: 600;
 }
 
 .home-text p { 
-    font-size: 1.2rem; 
-    margin-bottom: 2rem;
-    letter-spacing: 1px;
+    font-size: 1.1rem; 
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+    letter-spacing: 0.5px;
 }
 
 .btn {
     display: inline-block;
-    padding: 0.8rem 2rem;
+    padding: 1rem 2.8rem;
     background: var(--main-color);
     color: var(--bg-color);
     border-radius: 4px;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 700;
-    transition: .3s;
+    transition: .3s ease;
     cursor: pointer;
 }
 
@@ -135,14 +147,15 @@ header {
 /* 3. HEADINGS */
 .heading {
     text-align: center;
-    font-size: 2rem;
-    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    margin-bottom: 4rem; /* Generous space under main headings */
+    font-weight: 600;
 }
 .heading span { color: var(--main-color); }
 
 .about-content {
     background: var(--second-bg-color);
-    padding: 2rem;
+    padding: 3rem; /* Generous inside padding */
     border-radius: 5px;
     text-align: center;
     max-width: 800px;
@@ -150,8 +163,8 @@ header {
 }
 
 .about-content p {
-    font-size: 1rem;
-    font-weight: 500;
+    font-size: 1.1rem;
+    line-height: 1.8;
 }
 
 /* 4. SKILLS SECTION */
@@ -159,7 +172,8 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1.5rem;
+    /* Precise spacing between skill pills */
+    gap: 1.2rem; 
     max-width: 900px;
     margin: 0 auto;
 }
@@ -167,7 +181,7 @@ header {
 .skill-box {
     background: var(--second-bg-color);
     padding: 1rem 2.5rem;
-    border-radius: 1rem; /* Creates the pill shape */
+    border-radius: 2rem; /* creates the pill shape */
     text-align: center;
     transition: .3s ease;
 }
@@ -186,10 +200,12 @@ header {
 /* 5. PROJECTS SECTION */
 .projects-container {
     display: grid;
-    /* Forces exactly 3 columns as seen in mockup */
+    /* Forces exactly 3 columns on desktop */
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    max-width: 1100px;
+    /* Space between cards */
+    gap: 2.5rem; 
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -198,8 +214,7 @@ header {
     border-radius: 1rem;
     background: var(--second-bg-color);
     overflow: hidden;
-    display: flex;
-    height: 200px; 
+    height: 250px; 
 }
 
 .project-box img {
@@ -234,104 +249,110 @@ header {
     transform: translateY(0);
 }
 
-.project-layer h4 { font-size: 1.5rem; color: var(--main-color); }
-.project-layer p { font-size: 1rem; margin: .3rem 0 1rem; color: var(--text-color); }
+.project-layer h4 { font-size: 1.6rem; color: var(--main-color); margin-bottom: 0.5rem;}
+.project-layer p { font-size: 1rem; line-height: 1.6; margin-bottom: 1.5rem; color: var(--text-color); }
+.project-layer a { font-weight: 600; color: var(--main-color); }
 
 /* 6. CONTACT SECTION */
 form {
+    width: 100%;
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Space between form rows */
 }
 
 .input-box {
     display: flex;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
-.input-box input, textarea {
+.input-box input, form textarea {
     width: 100%;
     padding: 1.5rem;
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: var(--text-color);
     background: var(--second-bg-color);
     border-radius: 5px;
-    margin-bottom: 1rem;
 }
 
-.input-box input { width: 50%; }
+.input-box input { width: calc(50% - 0.75rem); } /* Precise 50% split with gap */
 
 .submit-container {
     display: flex;
     justify-content: center;
     margin-top: 1rem;
-    margin-bottom: 4rem;
+    margin-bottom: 5rem; /* Large space before social icons */
 }
 
 .social-icons {
     text-align: center;
     margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
 .social-icons p {
-    margin-bottom: 1rem;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .icons-wrapper {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 1.8rem; /* Precise spacing between round icons */
 }
 
 .social-icons a {
-    display: inline-flex;
+    display: flex;
     justify-content: center;
     align-items: center;
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 3.8rem;
+    height: 3.8rem;
     background: transparent;
     border: 2px solid var(--main-color);
     border-radius: 50%;
-    font-size: 1.5rem;
-    color: var(--text-color);
     transition: .3s ease;
 }   
 
 .social-icons a:hover {
     background: var(--main-color);
-    color: var(--bg-color);
 }
 
-/* Add this to control the size of the new image icons */
 .social-icons a img {
-    width: 1.8rem;
-    height: 1.8rem;
+    width: 2rem;
+    height: 2rem;
     object-fit: contain;
-    transition: .3s ease;
 }
-
 
 .back-to-top {
     text-align: center;
-    margin-top: 2rem;
-    font-size: 0.9rem;
+    margin-top: 3rem;
+    font-size: 1rem;
+}
+
+.back-to-top a {
+    color: var(--main-color);
+    font-weight: 600;
 }
 
 /* 7. FOOTER */
 .footer {
-    text-align: center;
-    padding: 1.5rem;
+    text-align: left; /* Binago natin from center to left */
+    padding: 2rem 9%; /* Nilagyan ng 9% sa left and right para pumantay sa margin ng sections mo */
     background: var(--second-bg-color);
-    margin-top: 2rem;
+    margin-top: 3rem;
 }
 
 .footer-text p {
     font-size: 0.9rem;
 }
 
-/* MENU ICON */
+/* MENU ICON (for mobile) */
 #menu-icon {
     font-size: 2rem;
     color: var(--bg-color); 
@@ -339,55 +360,58 @@ form {
     cursor: pointer;
 }
 
-/* --- MOBILE RESPONSIVENESS --- */
+/* --- MOBILE RESPONSIVENESS (Preserved) --- */
+@media (max-width: 991px) {
+    section { padding: 4rem 5% 2rem; }
+    .heading { font-size: 2rem; margin-bottom: 3rem; }
+}
+
 @media (max-width: 900px) {
     .home-content {
         flex-direction: column;
         text-align: center;
+        gap: 2.5rem;
     }
     
+    .home-img img { width: 220px; height: 260px; }
+    .home-text h1 { font-size: 2.2rem; }
+    .navbar { gap: 1.5rem; }
+
     .projects-container {
         grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
 }
 
 @media (max-width: 768px) {
-    header {
-        justify-content: flex-end; 
-    }
+    header { justify-content: flex-end; }
+    #menu-icon { display: block; }
 
-    #menu-icon {
-        display: block; 
-    }
-
+@media (max-width: 768px) {
     .navbar {
         position: absolute;
         top: 100%;
         left: 0;
         width: 100%;
+        padding: 1rem 3%;
         background: var(--main-color); 
         flex-direction: column;
         display: none; 
-    }
-
-    .navbar.active {
-        display: flex; 
-    }
-
-    .navbar a {
-        margin: 1rem 0;
-    }
-
-    .projects-container {
-        grid-template-columns: 1fr;
-    }
-
-    .input-box {
-        flex-direction: column;
-    }
-    
-    .input-box input {
-        width: 100%;
+        gap: 1.5rem;
+        z-index: 1000; /* Dito natin idadagdag para lumutang siya sa harap ng picture mo */
+        border-top: 2px solid var(--bg-color); /* Optional: Para may konting line na nagse-separate */
     }
 }
 
+    .navbar.active { display: flex; }
+
+    .navbar a { margin: 0; font-size: 1.1rem; }
+
+    .heading { font-size: 1.8rem; }
+    .about-content { padding: 2rem; }
+
+    .projects-container { grid-template-columns: 1fr; }
+
+    .input-box { flex-direction: column; gap: 1rem;}
+    .input-box input { width: 100%; margin: 0;}
+}

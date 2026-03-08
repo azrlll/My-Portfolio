@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</body>
+</html>
 </head>
 <body>
 
@@ -44,21 +47,11 @@
     <section class="skills" id="skills">
         <h2 class="heading">My <span>Skills</span></h2>
         <div class="skills-container">
-            <div class="skill-box">
-                <h3>HTML</h3>
-            </div>
-            <div class="skill-box">
-                <h3>CSS</h3>
-            </div>
-            <div class="skill-box">
-                <h3>JavaScript</h3>
-            </div>
-            <div class="skill-box">
-                <h3>Communication</h3>
-            </div>
-            <div class="skill-box">
-                <h3>Problem Solving</h3>
-            </div>
+            <div class="skill-box"><h3>HTML</h3></div>
+            <div class="skill-box"><h3>CSS</h3></div>
+            <div class="skill-box"><h3>JavaScript</h3></div>
+            <div class="skill-box"><h3>Communication</h3></div>
+            <div class="skill-box"><h3>Problem Solving</h3></div>
         </div>
     </section>
 
@@ -67,11 +60,11 @@
         <div class="projects-container">
             
             <div class="project-box">
-                <img src="image/proj1.png" target="_blank" alt="Project Image">
+                <img src="image/proj1.png" alt="Project Image">
                 <div class="project-layer">
                     <h4>Calculator</h4>
                     <p>This is a simple calculator program written in C. Based on the visible switch statement cases ('-', '*', '/') and the terminal output (414+411 = 825.00), it takes numerical inputs and an operator to perform basic arithmetic calculations.</p>
-                    <a href="image/proj1.png" target="_blank">View Project</a><i class="fa-solid fa-up-right-from-square"></i></a>
+                    <a href="image/proj1.png" target="_blank">View Project <i class="fa-solid fa-up-right-from-square"></i></a>
                 </div>
             </div>
 
@@ -80,7 +73,7 @@
                 <div class="project-layer">
                     <h4>Status Checker</h4>
                     <p>This is a basic grading tool that checks a student's score (currently 85) and prints a status like "Excellent," "Passing," or "Needs Improvement."</p>
-                    <a href="image/proj2.png" target="_blank">View Project</a><i class="fa-solid fa-up-right-from-square"></i></a>
+                    <a href="image/proj2.png" target="_blank">View Project <i class="fa-solid fa-up-right-from-square"></i></a>
                 </div>
             </div>
 
@@ -89,7 +82,7 @@
                 <div class="project-layer">
                     <h4>Task Repeater</h4>
                     <p>This program generates a multiplication table for a specific number. It uses a for loop to iterate from 1 to 10, multiplying the loop counter by a defined multiplier variable (which is set to 5) and printing the formatted results step-by-step.</p>
-                    <a href="image/proj3.png" target="_blank">View Project</a><i class="fa-solid fa-up-right-from-square"></i></a>
+                    <a href="image/proj3.png" target="_blank">View Project <i class="fa-solid fa-up-right-from-square"></i></a>
                 </div>
             </div>
         </div>
@@ -103,7 +96,7 @@
                 <input type="text" placeholder="Name">
                 <input type="email" placeholder="Email">
             </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Message Box"></textarea>
+            <textarea name="message" cols="30" rows="10" placeholder="Message Box"></textarea>
             
             <div class="submit-container">
                 <input type="submit" value="Send Message" class="btn">
@@ -111,8 +104,8 @@
         </form>
 
         <div class="social-icons">
-            <div class="social-icons">
             <p>Connect with me:</p>
+            <div class="icons-wrapper">
                 <a href="https://www.facebook.com/itsyaboyazrl/" target="_blank"> <img src="image/facebook.png" alt="Facebook"></a>
                 <a href="https://github.com/azrlll" target="_blank"> <img src="image/github.png" alt="GitHub"></a>
                 <a href="https://www.instagram.com/iii_azrl/?hl=en" target="_blank"> <img src="image/instagram.png" alt="Instagram"></a>
@@ -120,7 +113,7 @@
         </div>
         
         <div class="back-to-top">
-            <a href="#home" style="color: var(--main-color);">Back to top</a>
+            <a href="#home">Back to top</a>
         </div>
     </section>
 
